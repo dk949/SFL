@@ -16,9 +16,9 @@ The Simple File Library.
     the string will be allocated.
 4.  If a file cannot be closed, `SFL_FAILED_TO_CLOSE(ExpectedVoid)` will be
     called. By default it does nothing, but can be defined by the user.
-5. This library uses
-   [TartanLlama/expected](https://github.com/TartanLlama/expected) to indicate
-   errors. It is already included in the file.
+5.  This library uses
+    [TartanLlama/expected](https://github.com/TartanLlama/expected) to indicate
+    errors. It is already included in the file.
 
 ## Examples
 
@@ -65,6 +65,11 @@ The Simple File Library.
 
 * `File(const File &) = delete;`
 * `File &operator=(const File &) = delete;`
+* `ExpectedVoid close() noexcept;`
+  * Explicitly close file.
+  * Is not required, normally as file will be closed by the destructor.
+  * One benefit of using this is this function would be to get the error if the
+    file fails to close.
 * `[[nodiscard]] ExpectedString read() noexcept;`
   * Returns the file as a string.
 * `[[nodiscard]] ExpectedVoid write(const char *data, size_t size) noexcept;`
