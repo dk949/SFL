@@ -19,11 +19,13 @@ Important:
 3.  If using `alloca`, SFL will avoid allocating a new string on the heap. You
     can define `SFL_MAX_STACK_STRING` (512 by default) to set the threshold when
     the string will be allocated.
+4.  If a file cannot be closed, `SFL_FAILED_TO_CLOSE(ExpectedVoid)` will be
+    called. By default it does nothing, but can be defined by the user.
 
 The first section is TartanLlama's implementation of `std::expected`
     (avaialble at https://github.com/TartanLlama/expected)
 
-If you are looking for the `File API` it starts on line 2357.
+If you are looking for the `File API` it starts on line 2359.
 */
 
 

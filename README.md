@@ -1,6 +1,6 @@
 # SFL
 
-The Simple File Library. For when you just want to load a file.
+The Simple File Library.
 
 ## Important:
 
@@ -16,6 +16,9 @@ The Simple File Library. For when you just want to load a file.
     the string will be allocated.
 4.  If a file cannot be closed, `SFL_FAILED_TO_CLOSE(ExpectedVoid)` will be
     called. By default it does nothing, but can be defined by the user.
+5. This library uses
+   [TartanLlama/expected](https://github.com/TartanLlama/expected) to indicate
+   errors. It is already included in the file.
 
 ## Examples
 
